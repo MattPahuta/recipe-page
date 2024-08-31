@@ -7,23 +7,35 @@ Date: September 2024
 /* **************** */
 /* Custom Variables */
 /* **************** */
-:root {
-  
+:root { 
   /* Fonts */
   --ff-body: 'Outfit', sans-serif; 
   --ff-heading: 'Young Serif', serif;
-
   /* Font Sizes */
-
+  --fs-400: 1rem; /* 16px - text-preset-4 */
+  --fs-500: 1.25rem; /* 20px - text-preset-3 */
+  --fs-600: 1.75rem; /* 28px - text-preset-2 */
+  --fs-650: 2.25rem; /* 36px - text-preset-1 (mobile) */
+  --fs-700: 2.5rem; /* 40px - text-preset-1 */
   /* Colors */
-
-  /* Spacing * /
-  
-  /* Border radius */
-  --br-soft: 1rem;
-  --br-round: 50%;
-  
-
+  --white: #FFFFFF;
+  --brown-800: #854632;
+  --rose-50: #FFF7FB;
+  --rose-800: #7A284E;
+  --stone-100: #F3E5D7;
+  --stone-150: #E3DDD7;
+  --stone-600: #5F564D;
+  --stone-900: #312E2C;
+  /* Spacing */
+  --spacing-100: 0.5rem; /* 8px */
+  --spacing-150: 0.75rem; /* 12px */
+  --spacing-200: 1rem;
+  --spacing-300: 1.5rem; /* 24px */
+  --spacing-400: 2rem; /* 32px */
+  --spacing-450: 2.25rem; /* 36px */
+  --spacing-500: 2.5rem; /* 40px */
+  --spacing-600: 3rem; /* 48px */
+  --spacing-1600: 8rem; /* 128px */ 
 }
 
 /* RESET */
@@ -68,8 +80,90 @@ body {
   min-height: 100svh;
   display: flex;
   flex-direction: column;
+  align-items: center;
   font-family: var(--ff-body);
   font-size: var(--fs-400);
   line-height: 1.5;  
+  background: var(--stone-100);
+  color: var(--stone-600);
+}
 
+.recipe-card {
+  max-width: 46rem;
+  background: var(--white);
+  border-radius: var(--spacing-300);
+}
+
+.recipe-img {
+  object-fit: cover;
+}
+
+.card-content {
+  padding-inline: var(--spacing-400);
+  padding-block: var(--spacing-500);
+}
+
+.heading {
+  margin-bottom: var(--spacing-300);
+  font-family: var(--ff-heading);
+  line-height: 1;
+}
+
+.recipe-heading {
+  font-size: var(--fs-650);
+  font-size: clamp(var(--fs-650), 2.1923rem + 0.2564vw, var(--fs-700));
+  color: var(--stone-900);
+}
+
+.recipe-subheading {
+  font-size: var(--fs-600);
+  color: var(--brown-800);
+}
+
+.accent-container {
+  padding: var(--spacing-400);
+  background: var(--rose-50);
+  border-radius: var(--spacing-150);
+}
+
+.accent-heading {
+  font-size: var(--fs-500);
+  color: var(--rose-800);
+}
+
+.prep-list li::marker {
+  color: var(--rose-800);
+}
+
+.ingredient-list li::marker,
+.instructions-list li::marker {
+  color: var(--brown-800);
+}
+
+/* Table Styles */
+.recipe-table {
+  width: 100%;
+}
+
+.table-head,
+.table-data {
+  width: 50%;
+}
+
+@media (min-width: 40rem) {
+  .recipe-card {
+    margin-block: var(--spacing-1600);
+  }
+
+  .img-container {
+    padding-block-start: var(--spacing-500);
+    padding-inline: var(--spacing-500);
+  }
+
+  .recipe-img {
+    border-radius: var(--spacing-300);
+  }
+  .card-content {
+    padding-inline: var(--spacing-500);
+  }
 }
