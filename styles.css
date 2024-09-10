@@ -134,17 +134,25 @@ body {
   color: var(--rose-800);
 }
 
-.prep-list {
+.ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-100);
+
+}
+
+.ul {
   padding-left: var(--spacing-100);
   list-style: none;
 }
 
-.prep-list li {
-  display: flex;
+.ul li {
+  display: grid;
   align-items: center;
+  grid-template-columns: min-content 1fr;
 }
 
-.prep-list li::before {
+.ul li::before {
   margin-right: var(--spacing-300);
   content: "";
   width: 0.25rem;
@@ -156,6 +164,7 @@ body {
 .ingredient-list,
 .instructions-list {
   border-bottom: 1px solid var(--stone-150);
+  /* ToDo: remove block-end, not necessary with default padding? */
   padding-block-end: var(--spacing-400);
 }
 
@@ -164,17 +173,49 @@ body {
   margin-top: var(--spacing-400);
 }
 
-.ingredient-list {
+.ol {
+  padding-left: var(--spacing-300);
 }
 
-.ingredient-list li::marker,
-.instructions-list li::marker {
+.ol li {
+  padding-left: var(--spacing-200);
+}
+
+/* ToDo: add this to the ul's as well, remove flex */
+.ol li:not(:last-of-type) {
+  margin-bottom: var(--spacing-100);
+}
+
+.ol li::marker {
   color: var(--brown-800);
+  font-size: var(--fs-400);
+  font-weight: 700;
 }
 
-.instructions-list {
-  padding-block-end: var(--spacing-400);
+/* *** Custom counter method *** */
+/* ol {
+  counter-reset: my-awesome-counter;
+  list-style: none;
+  border: 1px solid red;
 }
+ol li {
+  margin: 0 0 0.5rem 0;
+  counter-increment: my-awesome-counter;
+  position: relative;
+}
+ol li::before {
+  content: counter(my-awesome-counter) ".";
+  color: var(--brown-800);
+  font-weight: bold;
+  position: absolute;
+  --size: 32px;
+  left: calc(-1 * var(--size) - 10px);
+  width: var(--size);
+  height: var(--size);
+  top: 0;
+  text-align: center;
+} */
+
 
 /* Table Styles */
 .recipe-table {
