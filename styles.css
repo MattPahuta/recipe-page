@@ -226,8 +226,10 @@ body {
 }
 
 @media (min-width: 40rem) {
+  .main {
+    padding-block: var(--spacing-1600);
+  }
   .recipe-card {
-    margin-block: var(--spacing-1600);
     border-radius: var(--spacing-300);
     width: clamp(38.5rem, 80vw, 46rem);
   }

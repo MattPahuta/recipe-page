@@ -29,8 +29,8 @@ This challenge is focused on ensuring proper HTML structure including:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [FEM solution](https://your-solution-url.com)
+- Live Site URL: [live site](https://recipe-page-ruddy-pi.vercel.app/)
 
 ## My process
 
