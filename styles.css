@@ -3,7 +3,6 @@ Author: Matt Pahuta
 https://www.mattpahuta.com
 Date: September 2024
 */
-
 /* **************** */
 /* Custom Variables */
 /* **************** */
@@ -78,10 +77,6 @@ p, h1, h2, h3, h4, h5, h6 {
 /* BASE STYLES */
 body {
   min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-family: var(--ff-body);
   font-size: var(--fs-400);
   line-height: 1.5;  
@@ -91,6 +86,7 @@ body {
 
 .recipe-card {
   max-width: 46rem;
+  margin-inline: auto;
   background: var(--white);
 }
 
@@ -185,31 +181,6 @@ body {
   font-weight: 700;
 }
 
-/* *** Custom counter method *** */
-/* ol {
-  counter-reset: my-awesome-counter;
-  list-style: none;
-  border: 1px solid red;
-}
-ol li {
-  margin: 0 0 0.5rem 0;
-  counter-increment: my-awesome-counter;
-  position: relative;
-}
-ol li::before {
-  content: counter(my-awesome-counter) ".";
-  color: var(--brown-800);
-  font-weight: bold;
-  position: absolute;
-  --size: 32px;
-  left: calc(-1 * var(--size) - 10px);
-  width: var(--size);
-  height: var(--size);
-  top: 0;
-  text-align: center;
-} */
-
-
 /* Table Styles */
 .recipe-table {
   width: 100%;
@@ -228,14 +199,19 @@ ol li::before {
 .table-head,
 .table-data {
   width: 50%;
-  padding-block: var(--spacing-100);
 }
 
-/* .table-head:not(:last-child),
-.table-data:not(:last-child) {
-  border-bottom: 1px solid var(--stone-150);
+.p-b {
+  padding-block: var(--spacing-150);
+}
 
-} */
+.p-b-start {
+  padding-block-start: var(--spacing-150);
+}
+
+.p-b-end {
+  padding-block-end: var(--spacing-150);
+}
 
 .table-head {
   padding-left: var(--spacing-400); 
@@ -253,14 +229,14 @@ ol li::before {
   .recipe-card {
     margin-block: var(--spacing-1600);
     border-radius: var(--spacing-300);
+    width: clamp(38.5rem, 80vw, 46rem);
   }
-
   .img-container {
     padding-block-start: var(--spacing-500);
     padding-inline: var(--spacing-500);
   }
-
   .recipe-img {
+    min-height: 18.75rem;
     border-radius: var(--spacing-300);
   }
   .card-content {
