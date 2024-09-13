@@ -29,7 +29,7 @@ This challenge is focused on ensuring proper HTML structure including:
 
 ### Links
 
-- Solution URL: [FEM solution](https://your-solution-url.com)
+- Solution URL: [FEM solution](https://www.frontendmentor.io/solutions/responsive-recipe-card-component-using-flexbox-and-css-grid-lL8gifcvBV)
 - Live Site URL: [live site](https://recipe-page-ruddy-pi.vercel.app/)
 
 ## My process
